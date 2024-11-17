@@ -5,11 +5,10 @@ using UnityEngine;
 public class DebrisDamage : MonoBehaviour
 {
     public PlayerHealth playerhealth;
-    // Start is called before the first frame update
     public int damage;
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             playerhealth.takedamage(damage);
         }

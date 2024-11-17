@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject selectedSkin;
+    public GameObject Selectedskin;
     public GameObject Player;
 
     private Sprite playerSprite;
     void Start()
     {
-        playerSprite = selectedSkin.GetComponent<SpriteRenderer>().sprite;
+        playerSprite = Selectedskin.GetComponent<SpriteRenderer>().sprite;
         Player.GetComponent<SpriteRenderer>().sprite = playerSprite;
     }
 
