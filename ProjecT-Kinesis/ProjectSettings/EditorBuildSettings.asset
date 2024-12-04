@@ -6,12 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Startup Screen.unity
+    path: Assets/Scenes/Menus/Startup Screen.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Customisation Menu.unity
+    path: Assets/Scenes/Menus/Customisation Menu.unity
     guid: a1184aa8fb775f54396923f724e13a74
   - enabled: 1
-    path: Assets/Scenes/Gameplay.unity
+    path: Assets/Scenes/Menus/Gameplay.unity
     guid: 9acfab9e65210a342930e07a6939e176
+  - enabled: 1
+    path: Assets/Scenes/Menus/Map Selector.unity
+    guid: b3c147965c47d0d47b341e5898272d94
+  - enabled: 1
+    path: Assets/Scenes/Levels/Rock Ocean.unity
+    guid: b9baff028a51bc14c8227ca6c619c84e
   m_configObjects: {}
