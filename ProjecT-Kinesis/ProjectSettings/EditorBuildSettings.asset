@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/Customisation Menu.unity
     guid: a1184aa8fb775f54396923f724e13a74
   - enabled: 1
-    path: Assets/Scenes/Menus/Gameplay.unity
+    path: Assets/Scenes/Levels/Gameplay.unity
     guid: 9acfab9e65210a342930e07a6939e176
   - enabled: 1
     path: Assets/Scenes/Menus/Map Selector.unity

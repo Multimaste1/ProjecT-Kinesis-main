@@ -510,7 +510,7 @@ GameObject:
   - component: {fileID: 492281370}
   - component: {fileID: 492281369}
   m_Layer: 5
-  m_Name: Map3
+  m_Name: Sunset Ocean
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -722,7 +722,7 @@ GameObject:
   - component: {fileID: 969972206}
   - component: {fileID: 969972205}
   m_Layer: 5
-  m_Name: Map4
+  m_Name: Neo City
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1081,7 +1081,7 @@ GameObject:
   - component: {fileID: 1574840503}
   - component: {fileID: 1574840502}
   m_Layer: 5
-  m_Name: Map1
+  m_Name: Rock Ocean
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1237,7 +1237,7 @@ GameObject:
   - component: {fileID: 1627187844}
   - component: {fileID: 1627187843}
   m_Layer: 5
-  m_Name: Map2
+  m_Name: Orange City
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1381,7 +1381,7 @@ GameObject:
   - component: {fileID: 1668671473}
   - component: {fileID: 1668671472}
   m_Layer: 5
-  m_Name: Map5
+  m_Name: Night Ocean
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
