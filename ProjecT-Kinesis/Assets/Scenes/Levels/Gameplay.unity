@@ -579,7 +579,8 @@ GameObject:
   m_Component:
   - component: {fileID: 507329787}
   - component: {fileID: 507329788}
-  m_Layer: 0
+  - component: {fileID: 507329789}
+  m_Layer: 9
   m_Name: Orb
   m_TagString: Orb
   m_Icon: {fileID: 0}
@@ -639,8 +640,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 145875727
-  m_SortingLayer: 2
+  m_SortingLayerID: -2133042207
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2dc136408a5d5474d8812747e0faf3df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -653,6 +654,98 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &507329789
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507329786}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.1777929, y: 0.28188884}
+  serializedVersion: 2
+  m_Radius: 4.7540503
+--- !u!1001 &771018809
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2900479520946749967, guid: 26ff6d8eabce2594081a254b51bef076, type: 3}
+      propertyPath: m_Name
+      value: Meteor
+      objectReference: {fileID: 0}
+    - target: {fileID: 8351076041876398801, guid: 26ff6d8eabce2594081a254b51bef076, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.5549965
+      objectReference: {fileID: 0}
+    - target: {fileID: 8351076041876398801, guid: 26ff6d8eabce2594081a254b51bef076, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.3199997
+      objectReference: {fileID: 0}
+    - target: {fileID: 8351076041876398801, guid: 26ff6d8eabce2594081a254b51bef076, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.4498831
+      objectReference: {fileID: 0}
+    - target: {fileID: 8351076041876398801, guid: 26ff6d8eabce2594081a254b51bef076, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8351076041876398801, guid: 26ff6d8eabce2594081a254b51bef076, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8351076041876398801, guid: 26ff6d8eabce2594081a254b51bef076, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8351076041876398801, guid: 26ff6d8eabce2594081a254b51bef076, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8351076041876398801, guid: 26ff6d8eabce2594081a254b51bef076, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8351076041876398801, guid: 26ff6d8eabce2594081a254b51bef076, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8351076041876398801, guid: 26ff6d8eabce2594081a254b51bef076, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 26ff6d8eabce2594081a254b51bef076, type: 3}
 --- !u!1 &810888460
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,7 +756,6 @@ GameObject:
   m_Component:
   - component: {fileID: 810888462}
   - component: {fileID: 810888463}
-  - component: {fileID: 810888464}
   m_Layer: 0
   m_Name: Orb
   m_TagString: Untagged
@@ -700,41 +792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
---- !u!58 &810888464
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810888460}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.10059893, y: 0.050301254}
-  serializedVersion: 2
-  m_Radius: 3.1329386
+  projectileVelocity: 0
 --- !u!1 &818885940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1558,7 +1616,7 @@ GameObject:
   - component: {fileID: 3627448137173758174}
   - component: {fileID: 1214642325502318222}
   - component: {fileID: 2042677643323006299}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1652,9 +1710,9 @@ GameObject:
   - component: {fileID: 9105974465205545566}
   - component: {fileID: 4295786984838885431}
   - component: {fileID: 5031537518020237491}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Island Platform
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1763,34 +1821,7 @@ MonoBehaviour:
   range: 0.5
   projectile: {fileID: 2900479520946749967, guid: 26ff6d8eabce2594081a254b51bef076, type: 3}
   projectilePos: {fileID: 256021293}
-  timer: 1
---- !u!50 &3776605209922383354
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6002521758854025337}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
+  timer: 0.5
 --- !u!1 &4137722362088266737
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,7 +1834,7 @@ GameObject:
   - component: {fileID: 8317387133919479461}
   - component: {fileID: 648034399530295216}
   - component: {fileID: 3230385970898041104}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1954,11 +1985,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5459819944553904780}
-  - component: {fileID: 3776605209922383354}
   - component: {fileID: 6545107659999860170}
   m_Layer: 0
-  m_Name: Player
-  m_TagString: Player
+  m_Name: Player+Island
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2055,3 +2085,4 @@ SceneRoots:
   - {fileID: 950490844}
   - {fileID: 2077793900}
   - {fileID: 4899546514564388759}
+  - {fileID: 771018809}
