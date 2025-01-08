@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Orb
+  - Platform
   layers:
   - Default
   - TransparentFX
@@ -12,11 +13,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Projectile
+  - Enemy
+  - Player
+  - Orb
+  - Platform
   - 
   - 
   - 
