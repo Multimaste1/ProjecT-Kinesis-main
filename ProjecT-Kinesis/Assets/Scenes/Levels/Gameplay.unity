@@ -579,6 +579,7 @@ GameObject:
   m_Component:
   - component: {fileID: 507329787}
   - component: {fileID: 507329788}
+  - component: {fileID: 507329790}
   - component: {fileID: 507329789}
   m_Layer: 9
   m_Name: Orb
@@ -599,7 +600,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 10}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1037952639}
   m_Father: {fileID: 810888462}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &507329788
@@ -689,6 +691,21 @@ CircleCollider2D:
   m_Offset: {x: -0.1777929, y: 0.28188884}
   serializedVersion: 2
   m_Radius: 4.7540503
+--- !u!114 &507329790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507329786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8fdfe059a3c354c843ae5f9eddfbd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  reflectedProjectile: {fileID: 6877321121882162765, guid: 5807a398f6d9744468f77c4230b2968d, type: 3}
+  reflectedProjectilePos: {fileID: 1037952639}
 --- !u!1001 &771018809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -755,7 +772,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 810888462}
-  - component: {fileID: 810888463}
   m_Layer: 0
   m_Name: Orb
   m_TagString: Untagged
@@ -779,20 +795,6 @@ Transform:
   - {fileID: 507329787}
   m_Father: {fileID: 950490844}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &810888463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 810888460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad8fdfe059a3c354c843ae5f9eddfbd2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  projectileVelocity: 0
 --- !u!1 &818885940
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,6 +1122,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1354351, y: 10.027088}
   m_EdgeRadius: 0
+--- !u!1 &1037952638
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1037952639}
+  m_Layer: 9
+  m_Name: ReflectedProjectilePosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1037952639
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037952638}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.9, y: -0.06, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 507329787}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1484928704
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,7 +1651,7 @@ GameObject:
   - component: {fileID: 2042677643323006299}
   m_Layer: 7
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
