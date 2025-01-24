@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class EnemyProjectile : MonoBehaviour
 {
+    public int damage;
 
-    private GameObject player;
-    private Rigidbody2D Rigidbody;
+
+    public GameObject player;
+    public Rigidbody2D Rigidbody;
     public float projectileVelocity;
     // Start is called before the first frame update
 
@@ -34,14 +36,27 @@ public class EnemyProjectile : MonoBehaviour
 
 
     }
-    public void OnCollisionEnter2D(Collision2D collision) //deletes the projectile when it hits the orb
+
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        orbCollision(collision);
+        orbCollision(collision); //creates an OncollisionEnter2D function called orbCollision which is easier to call upon
+
     }
 
     public void orbCollision(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Orb"))
+        if (collision.gameObject.CompareTag("Player")) //checks if tag of object is Player and if it is runs take damage function from PlayerHealth script
+        {
+            Debug.Log("hit");
+            collision.gameObject.GetComponent<PlayerHealth>().takedamage(damage); //gets the PlayerHealth script from the player and runs the takedamage function
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.CompareTag("Platform")) //destroys the projectile if it colides with the players platform
+        {
+            Destroy(gameObject);
+        }
+        if (collision.gameObject.CompareTag("Orb")) //destroys the projectile if it collides with the orb
         {
             Debug.Log("hit");
             Destroy(gameObject);
