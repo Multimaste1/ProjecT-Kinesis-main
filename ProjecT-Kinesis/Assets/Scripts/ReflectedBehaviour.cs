@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ReflectedProjectileBehaviour : MonoBehaviour
 {
+    public int damage;
     private GameObject orb;
     private GameObject enemy;
     private Rigidbody2D reflectedprojectileRigidBody;
@@ -23,6 +24,21 @@ public class ReflectedProjectileBehaviour : MonoBehaviour
     }
 
     // Update is called once per frame
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        reflectedOrb(collision);
+    }
+
+    public void reflectedOrb(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy")) //checks if tag of object is enemy and if it is runs take damage function from EnemyHealth script
+        {
+            Debug.Log("hit");
+            collision.gameObject.GetComponent<EnemyHealth>().takedamage(damage); //gets the Enemy script from the enemy and runs the takedamage function
+            Destroy(gameObject);
+        }
+    }
     void Update()
     {
         
