@@ -8,7 +8,7 @@ public class ReflectedProjectileBehaviour : MonoBehaviour
     private GameObject enemy;
     private Rigidbody2D reflectedprojectileRigidBody;
 
-    private float reflectedprojectileVelocity = 2;
+    public float reflectedprojectileVelocity;
 
     // Start is called before the first frame update
     void Start()
