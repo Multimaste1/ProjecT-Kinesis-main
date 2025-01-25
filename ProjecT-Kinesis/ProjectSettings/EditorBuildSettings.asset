@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Rock Ocean.unity
     guid: b9baff028a51bc14c8227ca6c619c84e
+  - enabled: 1
+    path: Assets/Scenes/Menus/Upgrade Menu.unity
+    guid: f82b439e4b6f8f54aac3b7336236137d
   m_configObjects: {}
