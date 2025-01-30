@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d32250999cc85a4cbbc280452fe6ce9, type: 3}
-  m_Name: Coins
+  m_Script: {fileID: 11500000, guid: 2770d3f9c541e6449bd5271acd0da078, type: 3}
+  m_Name: HealthUpgrade
   m_EditorClassIdentifier: 
-  name: Coins
-  coinbalance: 20
+  UpgradeType: Health
+  UpgradeCost: 49
+  UpgradeLevel: 4

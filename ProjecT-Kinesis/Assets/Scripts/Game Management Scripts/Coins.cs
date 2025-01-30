@@ -8,7 +8,7 @@ using static UnityEditor.Timeline.TimelinePlaybackControls;
 using System.Reflection;
 
 
-[CreateAssetMenu(fileName = "Coins", menuName = "Persistence")]
+[CreateAssetMenu(fileName = "Coins", menuName = "Coins")]
 public class Coins : ScriptableObject
 {
     public new string name;
