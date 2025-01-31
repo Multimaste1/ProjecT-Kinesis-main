@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2770d3f9c541e6449bd5271acd0da078, type: 3}
-  m_Name: HealthUpgrade
+  m_Script: {fileID: 11500000, guid: 562470c1b13a3ce4f8416406a0d864be, type: 3}
+  m_Name: SizeUpgrade
   m_EditorClassIdentifier: 
-  UpgradeType: Health
+  UpgradeType: Size
   UpgradeCost: 10
   UpgradeLevel: 0

@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 39389161}
   - component: {fileID: 39389160}
   - component: {fileID: 39389159}
+  - component: {fileID: 39389162}
   m_Layer: 5
   m_Name: Size Upgrade Bar
   m_TagString: Untagged
@@ -198,6 +199,39 @@ RectTransform:
   m_AnchoredPosition: {x: 200, y: 22}
   m_SizeDelta: {x: 30, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &39389162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39389157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4055bbe64eef214e853d68ef6f0ba39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinstext: {fileID: 1765144036}
+  healthCosttext: {fileID: 522281943}
+  flightCosttext: {fileID: 306237010}
+  sizeCosttext: {fileID: 1968004742}
+  velocityCosttext: {fileID: 365477074}
+  upgradeBars:
+  - {fileID: 210835328, guid: d713a26e6f3089c4fac9d9d173c92a90, type: 3}
+  - {fileID: -535511204, guid: d713a26e6f3089c4fac9d9d173c92a90, type: 3}
+  - {fileID: -397886129, guid: d713a26e6f3089c4fac9d9d173c92a90, type: 3}
+  - {fileID: -985117, guid: d713a26e6f3089c4fac9d9d173c92a90, type: 3}
+  - {fileID: 2011339631, guid: d713a26e6f3089c4fac9d9d173c92a90, type: 3}
+  - {fileID: -1135385634, guid: d713a26e6f3089c4fac9d9d173c92a90, type: 3}
+  healthupgradeBar: {fileID: 1827282433}
+  flightupgradeBar: {fileID: 603511785}
+  sizeupgradeBar: {fileID: 39389159}
+  velocityupgradeBar: {fileID: 1448022679}
+  coins: {fileID: 11400000, guid: c99857d9c0fb3ba46a1db765a7a9096c, type: 2}
+  health: {fileID: 11400000, guid: 115302815fb6f5140a0e2dfc730a0857, type: 2}
+  flight: {fileID: 11400000, guid: c99017145f7696d4aa12c797d749c6f7, type: 2}
+  size: {fileID: 11400000, guid: c6539a1e6723ba048af7b1c973404dd4, type: 2}
+  velocity: {fileID: 11400000, guid: 3f597fbf23b73e94cba5d0060289c02c, type: 2}
 --- !u!1 &41755483
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,7 +447,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114920104}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 39389162}
+        m_TargetAssemblyTypeName: UpgradesManagement, Assembly-CSharp
+        m_MethodName: upgradeSize
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &114920104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -533,7 +579,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 227388284}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 603511788}
+        m_TargetAssemblyTypeName: UpgradesManagement, Assembly-CSharp
+        m_MethodName: upgradeFlight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &227388284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,8 +664,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200, y: -145.2}
-  m_SizeDelta: {x: 106.2977, y: 38.3909}
+  m_AnchoredPosition: {x: -208.54349, y: -145.2}
+  m_SizeDelta: {x: 124.7726, y: 38.3909}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &306237010
 MonoBehaviour:
@@ -663,7 +721,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -740,8 +798,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200, y: -143}
-  m_SizeDelta: {x: 106.2977, y: 38.3909}
+  m_AnchoredPosition: {x: 193.0705, y: -143}
+  m_SizeDelta: {x: 121.2824, y: 38.3909}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &365477074
 MonoBehaviour:
@@ -797,7 +855,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1065,8 +1123,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200, y: -19.195}
-  m_SizeDelta: {x: 106.2977, y: 38.3909}
+  m_AnchoredPosition: {x: -202.99666, y: -19.195}
+  m_SizeDelta: {x: 131.1732, y: 38.3909}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &522281943
 MonoBehaviour:
@@ -1122,7 +1180,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1310,6 +1368,7 @@ GameObject:
   - component: {fileID: 603511787}
   - component: {fileID: 603511786}
   - component: {fileID: 603511785}
+  - component: {fileID: 603511788}
   m_Layer: 5
   m_Name: Flight Upgrade Bar
   m_TagString: Untagged
@@ -1374,6 +1433,39 @@ RectTransform:
   m_AnchoredPosition: {x: -200, y: -109}
   m_SizeDelta: {x: 30, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &603511788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603511783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4055bbe64eef214e853d68ef6f0ba39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinstext: {fileID: 1765144036}
+  healthCosttext: {fileID: 522281943}
+  flightCosttext: {fileID: 306237010}
+  sizeCosttext: {fileID: 1968004742}
+  velocityCosttext: {fileID: 365477074}
+  upgradeBars:
+  - {fileID: 210835328, guid: d713a26e6f3089c4fac9d9d173c92a90, type: 3}
+  - {fileID: -535511204, guid: d713a26e6f3089c4fac9d9d173c92a90, type: 3}
+  - {fileID: -397886129, guid: d713a26e6f3089c4fac9d9d173c92a90, type: 3}
+  - {fileID: -985117, guid: d713a26e6f3089c4fac9d9d173c92a90, type: 3}
+  - {fileID: 2011339631, guid: d713a26e6f3089c4fac9d9d173c92a90, type: 3}
+  - {fileID: -1135385634, guid: d713a26e6f3089c4fac9d9d173c92a90, type: 3}
+  healthupgradeBar: {fileID: 1827282433}
+  flightupgradeBar: {fileID: 603511785}
+  sizeupgradeBar: {fileID: 39389159}
+  velocityupgradeBar: {fileID: 1448022679}
+  coins: {fileID: 11400000, guid: c99857d9c0fb3ba46a1db765a7a9096c, type: 2}
+  health: {fileID: 11400000, guid: 115302815fb6f5140a0e2dfc730a0857, type: 2}
+  flight: {fileID: 11400000, guid: c99017145f7696d4aa12c797d749c6f7, type: 2}
+  size: {fileID: 11400000, guid: c6539a1e6723ba048af7b1c973404dd4, type: 2}
+  velocity: {fileID: 11400000, guid: 3f597fbf23b73e94cba5d0060289c02c, type: 2}
 --- !u!1 &643122531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1685,7 +1777,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 954656691}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1448022682}
+        m_TargetAssemblyTypeName: UpgradesManagement, Assembly-CSharp
+        m_MethodName: upgradeVelocity
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &954656691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2250,6 +2354,7 @@ GameObject:
   - component: {fileID: 1448022681}
   - component: {fileID: 1448022680}
   - component: {fileID: 1448022679}
+  - component: {fileID: 1448022682}
   m_Layer: 5
   m_Name: Velocity Upgrade Bar
   m_TagString: Untagged
@@ -2314,6 +2419,39 @@ RectTransform:
   m_AnchoredPosition: {x: 200.00002, y: -105}
   m_SizeDelta: {x: 30, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1448022682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448022677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4055bbe64eef214e853d68ef6f0ba39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinstext: {fileID: 1765144036}
+  healthCosttext: {fileID: 522281943}
+  flightCosttext: {fileID: 306237010}
+  sizeCosttext: {fileID: 1968004742}
+  velocityCosttext: {fileID: 365477074}
+  upgradeBars:
+  - {fileID: 210835328, guid: d713a26e6f3089c4fac9d9d173c92a90, type: 3}
+  - {fileID: -535511204, guid: d713a26e6f3089c4fac9d9d173c92a90, type: 3}
+  - {fileID: -397886129, guid: d713a26e6f3089c4fac9d9d173c92a90, type: 3}
+  - {fileID: -985117, guid: d713a26e6f3089c4fac9d9d173c92a90, type: 3}
+  - {fileID: 2011339631, guid: d713a26e6f3089c4fac9d9d173c92a90, type: 3}
+  - {fileID: -1135385634, guid: d713a26e6f3089c4fac9d9d173c92a90, type: 3}
+  healthupgradeBar: {fileID: 1827282433}
+  flightupgradeBar: {fileID: 603511785}
+  sizeupgradeBar: {fileID: 39389159}
+  velocityupgradeBar: {fileID: 1448022679}
+  coins: {fileID: 11400000, guid: c99857d9c0fb3ba46a1db765a7a9096c, type: 2}
+  health: {fileID: 11400000, guid: 115302815fb6f5140a0e2dfc730a0857, type: 2}
+  flight: {fileID: 11400000, guid: c99017145f7696d4aa12c797d749c6f7, type: 2}
+  size: {fileID: 11400000, guid: c6539a1e6723ba048af7b1c973404dd4, type: 2}
+  velocity: {fileID: 11400000, guid: 3f597fbf23b73e94cba5d0060289c02c, type: 2}
 --- !u!1 &1539370505
 GameObject:
   m_ObjectHideFlags: 0
@@ -2871,8 +3009,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 233, y: -179.14}
-  m_SizeDelta: {x: 135.6532, y: 44.2888}
+  m_AnchoredPosition: {x: 221.29, y: -179.14}
+  m_SizeDelta: {x: 160.97, y: 44.2888}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1765144036
 MonoBehaviour:
@@ -2928,7 +3066,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3061,7 +3199,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinstext: {fileID: 1765144036}
   healthCosttext: {fileID: 522281943}
-  flightCosttext: {fileID: 0}
+  flightCosttext: {fileID: 306237010}
+  sizeCosttext: {fileID: 1968004742}
+  velocityCosttext: {fileID: 365477074}
   upgradeBars:
   - {fileID: 210835328, guid: d713a26e6f3089c4fac9d9d173c92a90, type: 3}
   - {fileID: -535511204, guid: d713a26e6f3089c4fac9d9d173c92a90, type: 3}
@@ -3070,8 +3210,14 @@ MonoBehaviour:
   - {fileID: 2011339631, guid: d713a26e6f3089c4fac9d9d173c92a90, type: 3}
   - {fileID: -1135385634, guid: d713a26e6f3089c4fac9d9d173c92a90, type: 3}
   healthupgradeBar: {fileID: 1827282433}
+  flightupgradeBar: {fileID: 603511785}
+  sizeupgradeBar: {fileID: 39389159}
+  velocityupgradeBar: {fileID: 1448022679}
   coins: {fileID: 11400000, guid: c99857d9c0fb3ba46a1db765a7a9096c, type: 2}
   health: {fileID: 11400000, guid: 115302815fb6f5140a0e2dfc730a0857, type: 2}
+  flight: {fileID: 11400000, guid: c99017145f7696d4aa12c797d749c6f7, type: 2}
+  size: {fileID: 11400000, guid: c6539a1e6723ba048af7b1c973404dd4, type: 2}
+  velocity: {fileID: 11400000, guid: 3f597fbf23b73e94cba5d0060289c02c, type: 2}
 --- !u!1 &1922830987
 GameObject:
   m_ObjectHideFlags: 0
@@ -3287,8 +3433,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 200, y: -19.195}
-  m_SizeDelta: {x: 106.2977, y: 38.3909}
+  m_AnchoredPosition: {x: 193.19675, y: -19.195}
+  m_SizeDelta: {x: 121.0094, y: 38.3909}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1968004742
 MonoBehaviour:
@@ -3344,7 +3490,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
