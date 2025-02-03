@@ -1666,8 +1666,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2184a2aaba00e004093fe4f9325bdb7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerhealth: {fileID: 1378978265}
-  damage: 2
 --- !u!58 &1167170129
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2084,17 +2082,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7998514573266371440, guid: e9cf3b4d8b340ea43b470626df84b5ac, type: 3}
   m_PrefabInstance: {fileID: 1378978263}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1378978265 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6814524488447248177, guid: e9cf3b4d8b340ea43b470626df84b5ac, type: 3}
-  m_PrefabInstance: {fileID: 1378978263}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1378978264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69b83611177f7974faa78f6bdcf634c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1378978266 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7699536058288444234, guid: e9cf3b4d8b340ea43b470626df84b5ac, type: 3}
@@ -2400,6 +2387,9 @@ MonoBehaviour:
   enemySpeed: 5
   enemyMaxDistance: 5
   range: 0.5
+  projectile: {fileID: 0}
+  projectilePos: {fileID: 0}
+  timer: 0
 --- !u!212 &1670471874
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3334,6 +3324,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  reflectedProjectile: {fileID: 0}
+  reflectedProjectilePos: {fileID: 0}
 --- !u!1 &2144234509
 GameObject:
   m_ObjectHideFlags: 0
