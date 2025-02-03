@@ -13,24 +13,24 @@ public class UpgradesManagement : MonoBehaviour
  
 
 
-    public TextMeshProUGUI coinstext;
+    public TextMeshProUGUI coinstext; //text component for coinstext
 
-    public TextMeshProUGUI healthCosttext;
+    public TextMeshProUGUI healthCosttext; //text components for upgrade costs
     public TextMeshProUGUI flightCosttext;
     public TextMeshProUGUI sizeCosttext;
     public TextMeshProUGUI velocityCosttext;
 
 
     public Sprite[] upgradeBars; //array to store the different levels of the upgrade bar
-    public Image healthupgradeBar; //image component that specifically stores the health upgrade bar; dragged in from the inspector
+    public Image healthupgradeBar; //image components that specifically stores the corresponding upgrade bar; dragged in from the inspector
     public Image flightupgradeBar;
     public Image sizeupgradeBar;
     public Image velocityupgradeBar;
 
-    //stores position of level in the array
+    
 
     public Coins coins; //allows upgrades to access the Coins scriptable object
-    public HealthUpgrade health; //creates instance of healthUpgrade scriptable object
+    public HealthUpgrade health; //creates instances of Upgrade's scriptable object
     public FlightUpgrade flight;
     public SizeUpgrade size;
     public VelocityUpgrade velocity;
@@ -49,13 +49,13 @@ public class UpgradesManagement : MonoBehaviour
 
     public void UpdateUI() //function to apply UI elements
     {
-        coinstext.text = "Coins: " + Mathf.FloorToInt(coins.coinbalance).ToString();
-        healthCosttext.text = "Cost: " + Mathf.FloorToInt(health.UpgradeCost).ToString();
+        coinstext.text = "Coins: " + Mathf.FloorToInt(coins.coinbalance).ToString(); //changes coin text to show coinbalance
+        healthCosttext.text = "Cost: " + Mathf.FloorToInt(health.UpgradeCost).ToString(); //changes costs text to show different upgrade costs
         flightCosttext.text = "Cost: " + Mathf.FloorToInt(flight.UpgradeCost).ToString();
         sizeCosttext.text = "Cost: " + Mathf.FloorToInt(size.UpgradeCost).ToString();
         velocityCosttext.text = "Cost: " + Mathf.FloorToInt(velocity.UpgradeCost).ToString();
 
-        healthupgradeBar.sprite = upgradeBars[health.UpgradeLevel];
+        healthupgradeBar.sprite = upgradeBars[health.UpgradeLevel]; //changes sprite of upgrades corresponding to their upgrade level
         flightupgradeBar.sprite = upgradeBars[flight.UpgradeLevel];
         sizeupgradeBar.sprite = upgradeBars[size.UpgradeLevel];
         velocityupgradeBar.sprite = upgradeBars[velocity.UpgradeLevel];
@@ -74,8 +74,8 @@ public class UpgradesManagement : MonoBehaviour
             coinstext.text = "Coins: " + coins.coinbalance.ToString(); //changes coin text to display coin total after upgrade purchase
 
 
-            health.UpgradeCost = Mathf.FloorToInt(health.UpgradeCost * 1.5f);
-            healthCosttext.text = "Cost: " + health.UpgradeCost.ToString();
+            health.UpgradeCost = Mathf.FloorToInt(health.UpgradeCost * 1.5f); //increases upgrade cost by 50%
+            healthCosttext.text = "Cost: " + health.UpgradeCost.ToString(); //changes cost text of corresponding upgrade
             Debug.Log(coins.coinbalance);
             UpdateUI();
         }
