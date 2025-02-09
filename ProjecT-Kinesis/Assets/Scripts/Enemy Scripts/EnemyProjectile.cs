@@ -21,7 +21,7 @@ public class EnemyProjectile : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player"); //finds Player game object
 
         Vector3 direction = player.transform.position - transform.position; //sets direction for projectile to travel towards player
-        Rigidbody.velocity = new Vector2 (direction.x, direction.y).normalized * projectileVelocity;
+        Rigidbody.velocity = new Vector2 (direction.x, direction.y).normalized * projectileVelocity; //normalised converts the direction into a unit vector so that projectile travels at a constant speed no matter the direction
 
         float projectileRotation = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;//angle of rotation that projectile needs to face towards player; converts from radians to degrees 
         transform.rotation = Quaternion.Euler(0,0, projectileRotation);//adjusts rotation so that graphic of projectile is correct
