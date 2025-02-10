@@ -98,8 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b83611177f7974faa78f6bdcf634c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMaxHealth: 10
   Health: 10
+  maxHealth: 0
+  HealthUpgrade: {fileID: 11400000, guid: 115302815fb6f5140a0e2dfc730a0857, type: 2}
 --- !u!70 &8843073901407609233
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

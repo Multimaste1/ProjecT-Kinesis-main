@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2079418773938131394
+--- !u!1 &25127555820694777
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1032069407443909519}
-  m_Layer: 9
-  m_Name: ReflectedProjectilePosition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1032069407443909519
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2079418773938131394}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9, y: -0.06, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8090285998804907092}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7015864996044650267
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8090285998804907092}
-  - component: {fileID: 8765002201118082384}
-  - component: {fileID: 6804651845462704832}
-  - component: {fileID: 6961494628772788413}
+  - component: {fileID: 8569211892107375466}
+  - component: {fileID: 4045580522055305749}
+  - component: {fileID: 5673602435347546692}
+  - component: {fileID: 5027221801792402712}
   m_Layer: 9
   m_Name: Orb
   m_TagString: Orb
@@ -50,29 +19,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8090285998804907092
+--- !u!4 &8569211892107375466
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7015864996044650267}
+  m_GameObject: {fileID: 25127555820694777}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1032069407443909519}
-  m_Father: {fileID: 816643114181426079}
+  - {fileID: 400499913291738768}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8765002201118082384
+--- !u!212 &4045580522055305749
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7015864996044650267}
+  m_GameObject: {fileID: 25127555820694777}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -118,28 +87,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6804651845462704832
+--- !u!114 &5673602435347546692
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7015864996044650267}
+  m_GameObject: {fileID: 25127555820694777}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad8fdfe059a3c354c843ae5f9eddfbd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speedMultiplier: 0
   reflectedProjectile: {fileID: 6877321121882162765, guid: 5807a398f6d9744468f77c4230b2968d, type: 3}
-  reflectedProjectilePos: {fileID: 1032069407443909519}
---- !u!58 &6961494628772788413
+  reflectedProjectilePos: {fileID: 400499913291738768}
+  VelocityUpgrade: {fileID: 11400000, guid: 3f597fbf23b73e94cba5d0060289c02c, type: 2}
+  SizeUpgrade: {fileID: 11400000, guid: c6539a1e6723ba048af7b1c973404dd4, type: 2}
+--- !u!58 &5027221801792402712
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7015864996044650267}
+  m_GameObject: {fileID: 25127555820694777}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -168,7 +139,7 @@ CircleCollider2D:
   m_Offset: {x: -0.1777929, y: 0.28188884}
   serializedVersion: 2
   m_Radius: 4.7540503
---- !u!1 &9137472514100591862
+--- !u!1 &5585256152185292726
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,27 +147,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 816643114181426079}
-  m_Layer: 0
-  m_Name: Orb
+  - component: {fileID: 400499913291738768}
+  m_Layer: 9
+  m_Name: ReflectedProjectilePosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &816643114181426079
+--- !u!4 &400499913291738768
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9137472514100591862}
+  m_GameObject: {fileID: 5585256152185292726}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -77.185455, y: -57.800987, z: 2.039091}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.9, y: -0.06, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8090285998804907092}
-  m_Father: {fileID: 0}
+  m_Children: []
+  m_Father: {fileID: 8569211892107375466}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
