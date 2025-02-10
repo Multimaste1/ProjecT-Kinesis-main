@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        switch (FlightUpgrade.UpgradeLevel)
+        switch (FlightUpgrade.UpgradeLevel) //different cases for different upgrade levels; upgrades are applied at the start of the scene
         {
             case 0: 
                 speedMultiplier = 2; break; //base movement speed
