@@ -8,6 +8,5 @@ public class HealthUpgrade : ScriptableObject
 {
    public string UpgradeType;
     public float UpgradeCost;
-    public int UpgradeLevel=0;
-    
+    public int UpgradeLevel = 0;
 }
