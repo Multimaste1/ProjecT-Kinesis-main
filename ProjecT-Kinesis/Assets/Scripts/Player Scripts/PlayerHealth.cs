@@ -5,12 +5,34 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
 
-    public int playerMaxHealth = 10;
-    public int Health;
+    [SerializeField]
+    private int Health;
+    [SerializeField]
+    private int maxHealth;
+
+    public HealthUpgrade HealthUpgrade;
 
     void Start()
     {
-        Health = playerMaxHealth;
+        switch (HealthUpgrade.UpgradeLevel) //different health values depending on upgrade level stored in Health Upgrade SO
+        {
+            case 0: 
+                maxHealth = 3; break; //base health
+            case 1:
+                maxHealth = 4; break;
+            case 2:
+                maxHealth = 5; break;
+            case 3:
+                maxHealth = 6; break;
+            case 4:
+                maxHealth = 7; break;
+            case 5:
+                maxHealth = 8; break;
+            default:
+                break;
+        }
+
+        Health = maxHealth;
     }
     public void takedamage(int damage)
     {
