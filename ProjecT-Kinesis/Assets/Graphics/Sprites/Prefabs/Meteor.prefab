@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a504c9e50b85744c9a954c5cf86df39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 1
   player: {fileID: 0}
   Rigidbody: {fileID: 0}
   projectileVelocity: 3
