@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
 
-    [SerializeField]
-    private int Health;
-    [SerializeField]
-    private int maxHealth;
+    
+    public int Health;
+    
+    public int maxHealth;
 
     public HealthUpgrade HealthUpgrade;
 
