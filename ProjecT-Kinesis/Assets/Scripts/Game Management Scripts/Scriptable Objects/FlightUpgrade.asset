@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: FlightUpgrade
   m_EditorClassIdentifier: 
   UpgradeType: Flight
-  UpgradeCost: 10
-  UpgradeLevel: 0
+  UpgradeCost: 22
+  UpgradeLevel: 5

@@ -75,8 +75,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 145875727
-  m_SortingLayer: 2
+  m_SortingLayerID: -2133042207
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 1894196582, guid: dd317a17145eeff4092fbdb5fbb57c84, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -104,7 +104,7 @@ MonoBehaviour:
   enemySpeed: 5
   enemyMaxDistance: 5
   range: 0.5
-  projectile: {fileID: 2900479520946749967, guid: 26ff6d8eabce2594081a254b51bef076, type: 3}
+  projectile: {fileID: 4979012845938219255, guid: 0e6a79e8077c956498b0c7e1a6406fb2, type: 3}
   projectilePos: {fileID: 3335724202182197173}
   timer: 0.5
 --- !u!114 &-6734606957533650131
