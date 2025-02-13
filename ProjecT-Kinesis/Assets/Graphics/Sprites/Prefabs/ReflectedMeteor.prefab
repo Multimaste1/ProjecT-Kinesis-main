@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8015079183526322869}
   - component: {fileID: 7914730902260498442}
   - component: {fileID: -4933031817159020951}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ReflectedMeteor
   m_TagString: Reflected
   m_Icon: {fileID: 0}
