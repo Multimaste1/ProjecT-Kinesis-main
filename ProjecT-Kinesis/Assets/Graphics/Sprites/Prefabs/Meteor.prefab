@@ -85,7 +85,7 @@ MonoBehaviour:
   damage: 1
   player: {fileID: 0}
   Rigidbody: {fileID: 0}
-  projectileVelocity: 3
+  projectileVelocity: 5
 --- !u!50 &1551601889235066271
 Rigidbody2D:
   serializedVersion: 4
