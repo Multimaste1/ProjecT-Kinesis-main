@@ -83,9 +83,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  player: {fileID: 0}
+  player: {fileID: 7998514573266371440, guid: e9cf3b4d8b340ea43b470626df84b5ac, type: 3}
   Rigidbody: {fileID: 0}
-  projectileVelocity: 5
+  projectileVelocity: 10
 --- !u!50 &1551601889235066271
 Rigidbody2D:
   serializedVersion: 4
