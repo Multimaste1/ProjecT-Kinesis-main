@@ -8,6 +8,8 @@ public class EnemyHealth : MonoBehaviour
     public int enemyMaxHealth;
     public int health;
 
+    public Score score;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class EnemyHealth : MonoBehaviour
         health = health - damage;
         if (health <= 0)
         {
+            score.score +=25;
             Destroy(gameObject);
         }
     }
