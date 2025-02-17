@@ -5,20 +5,20 @@ using UnityEngine.UIElements;
 
 public class CoinSpawner : MonoBehaviour
 {
-    public GameObject Coin;
-    public float spawnAreaMinX;
+    public GameObject Coin; //variable to spawn coin prefab
+    public float spawnAreaMinX; //variables to store min and max transform values of where coins can spawn
     public float spawnAreaMinY;
     public float spawnAreaMaxX;
     public float spawnAreaMaxY;
 
-    public float spawnInterval;
+    public float spawnInterval; //float to store rate at which coins spawn
 
     public void Start()
     {
-        InvokeRepeating("spawnCoin", 5f, spawnInterval);
+        InvokeRepeating("spawnCoin", 5f, spawnInterval); //spawns coins after initial seconds have passed, then at a rate of "spawnInterval" afterwards
     }
 
-    public void spawnCoin()
+    public void spawnCoin() //function to spawn in coin
     {
         float randomX = Random.Range(spawnAreaMinX, spawnAreaMaxX);
         float randomY = Random.Range( spawnAreaMinY, spawnAreaMaxY);
