@@ -118,7 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMaxHealth: 30
   health: 0
-  score: {fileID: 0}
+  score: {fileID: 11400000, guid: dbe1a1cb960aed74891a11fb4402c896, type: 2}
 --- !u!50 &8615009397194100353
 Rigidbody2D:
   serializedVersion: 4
