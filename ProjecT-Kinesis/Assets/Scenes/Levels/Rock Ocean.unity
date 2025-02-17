@@ -875,7 +875,7 @@ MonoBehaviour:
   spawnAreaMinY: 2
   spawnAreaMaxX: 8
   spawnAreaMaxY: -4
-  spawnInterval: 2
+  spawnInterval: 20
 --- !u!114 &774998021
 MonoBehaviour:
   m_ObjectHideFlags: 0
