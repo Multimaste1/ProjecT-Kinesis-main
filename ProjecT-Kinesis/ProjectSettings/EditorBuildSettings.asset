@@ -23,4 +23,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menus/Upgrade Menu.unity
     guid: f82b439e4b6f8f54aac3b7336236137d
+  - enabled: 1
+    path: Assets/Scenes/Levels/Neo City.unity
+    guid: 7d26e2ac164458248adbfc42412f65e4
+  - enabled: 1
+    path: Assets/Scenes/Levels/Night Ocean.unity
+    guid: 2cdc26917961d2641b003cc923ff1c1a
+  - enabled: 1
+    path: Assets/Scenes/Levels/Orange City.unity
+    guid: f710a2b7c5d570748b376c66d265058c
+  - enabled: 1
+    path: Assets/Scenes/Levels/Sunset Ocean.unity
+    guid: b33498e0d7b766a4883bdea2a0f89243
   m_configObjects: {}
