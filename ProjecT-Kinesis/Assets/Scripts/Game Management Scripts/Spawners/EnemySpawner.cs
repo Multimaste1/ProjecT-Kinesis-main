@@ -48,7 +48,7 @@ public class EnemySpawner : MonoBehaviour
 
     public void spawnBoss()
     {
-        Vector3 bossSpawnPoint = new Vector3(bossSpawnPointGameObject.transform.position.x, bossSpawnPointGameObject.transform.position.y, bossSpawnPointGameObject.transform.position.z);
+        Vector3 bossSpawnPoint = new Vector3(bossSpawnPointGameObject.transform.position.x, bossSpawnPointGameObject.transform.position.y,0);
         Instantiate(Boss, bossSpawnPoint, Quaternion.identity);
     }
 }
