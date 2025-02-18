@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: VelocityUpgrade
   m_EditorClassIdentifier: 
   UpgradeType: Velocity
-  UpgradeCost: 73
-  UpgradeLevel: 5
+  UpgradeCost: 10
+  UpgradeLevel: 1

@@ -14,6 +14,6 @@ public class GameManager : MonoBehaviour
         Player.GetComponent<SpriteRenderer>().sprite = playerSprite; //attaches sprite component of Selectedskin prefab to Player prefab
     }
 
-    // Update is called once per frame
+    
  
 }
