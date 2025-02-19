@@ -2,45 +2,95 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using System.Security.Cryptography;
 
 public class LeaderboardScript : MonoBehaviour
 {
-    private Transform entryContainer;
-    private Transform entryTemplate;
+    public GameObject entryTemplate; //LeaderboardEntryTemplate from inspector
+    public Transform entryContainer; //LeaderboardPanel from inspector
 
-    private void Awake()
+    private void Start()
     {
-        entryContainer = transform.Find("HighScoreEntryContainer");
-        entryTemplate = entryContainer.Find("HighScoreTemplate");
+        DisplayLeaderBoard();
+    }
 
-        entryTemplate.gameObject.SetActive(false);
+    public void SaveScore(string playerName, int newScore)
+    {
+        List<int> scores = LoadScores();
+        List<string> names = LoadNames();
 
-        float templateHeight = 20f;
-        for (int i = 0; i < 10; i++)
+        scores.Add(newScore);
+        names.Add(playerName);
+
+        for (int i = 0; i < scores.Count - 1; i++)
         {
-            Transform entryTransform = Instantiate(entryTemplate, entryContainer);
-            RectTransform entryRectTransform = entryTransform.GetComponent<RectTransform>();
-            entryRectTransform.anchoredPosition = new Vector2(0, -templateHeight * i);
-            entryTransform.gameObject.SetActive(true);
-
-            int rank = i + 1;
-            string rankString;
-            switch (rank) 
+            for (int j = i + 1; j < scores.Count; j++)
             {
-                default: rankString = rank + "TH"; break;
-                case 1: rankString = "1ST";break;
-                case 2: rankString = "2ND"; break;
-                case 3: rankString = "3RD"; break;
+                if (scores[j] > scores[i]) // Swap if new score is higher
+                {
+                    (scores[i], scores[j]) = (scores[j], scores[i]);
+                    (names[i], names[j]) = (names[j], names[i]);
+                }
             }
-
-            entryTransform.Find("positionText").GetComponent<Text>().text = rankString;
-
-            int score = 25;
-            entryTransform.Find("scoreText").GetComponent<Text>().text = score.ToString();
-            string name = "YES";
-            entryTransform.Find("nameText").GetComponent<Text>().text = name;
-
         }
-           
+
+        if (scores.Count > 10)
+        {
+            scores.RemoveAt(10);
+            names.RemoveAt(10);
+        }
+
+        for (int i = 0; i < scores.Count; i++)
+        {
+            PlayerPrefs.SetInt("Score" + i, scores[i]);
+            PlayerPrefs.SetString("Name" + i, names[i]);
+        }
+
+        PlayerPrefs.Save();
+    }
+
+    public void DisplayLeaderBoard()
+    {
+        List<int> scores = LoadScores();
+        List<string> names = LoadNames();
+
+        foreach (Transform child in entryContainer)
+        {
+            if (child != entryTemplate.transform)
+            {
+                Destroy(child.gameObject);
+            }
+        }
+
+        for (int i = 0; i < scores.Count; i++)
+        {
+            GameObject entry = Instantiate(entryTemplate, entryContainer);
+            entry.SetActive(true);
+
+            TMP_Text textComponent = entry.GetComponent<TMP_Text>();
+            textComponent.text = $"{i + 1}.{names[i]} - {scores[i]}";
+        }
+
+    }
+
+    private List<int> LoadScores()
+    {
+        List<int> scores = new List<int>();
+        for(int i = 0; i < 10; i++)
+        {
+            scores.Add(PlayerPrefs.GetInt("score" +1,0));
+        }
+        return scores;
+    }
+
+    private List<string> LoadNames()
+    {
+        List<string> names = new List<string>();
+        for(int i = 0; i < 10; i++)
+        {
+            names.Add(PlayerPrefs.GetString("Name" + 1, "Player"));
+        }
+        return names;
     }
 }
