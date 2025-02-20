@@ -19,10 +19,10 @@ public class BossBehaviour : MonoBehaviour
     {
 
         timer += Time.deltaTime; //increases timer by time passed between frames, real world seconds
-        if (timer > 2) //how long enemy needs to wait before shooting, afterwards takes 2 seconds to shoot
+        if (timer > 1) //how long enemy needs to wait before shooting, afterwards takes 2 seconds to shoot
         {
             timer = 0;
-            InvokeRepeating("shoot", 2f, 0.1f);
+            shoot();
         }
     }
 
