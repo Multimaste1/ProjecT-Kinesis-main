@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1104554050095275103}
   - component: {fileID: 3847251484520521821}
+  - component: {fileID: 2683541341123780720}
   - component: {fileID: 6799010500859140279}
-  - component: {fileID: 818141162633016435}
   - component: {fileID: 8615009397194100353}
   - component: {fileID: 6311049918978458331}
   m_Layer: 7
   m_Name: Boss
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,6 +52,22 @@ MonoBehaviour:
   projectile: {fileID: 4979012845938219255, guid: 0e6a79e8077c956498b0c7e1a6406fb2, type: 3}
   projectilePos: {fileID: 8345435864775154632}
   timer: 2
+--- !u!114 &2683541341123780720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268848219878469999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349842bf80b40f845b07fa880439876c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossMaxHealth: 30
+  bossHealth: 0
+  difficulty: {fileID: 11400000, guid: 3db55f3ecbd67354a8443e02c5af4851, type: 2}
+  score: {fileID: 11400000, guid: dbe1a1cb960aed74891a11fb4402c896, type: 2}
 --- !u!212 &6799010500859140279
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -104,23 +120,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &818141162633016435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 268848219878469999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a90c9f7dd2763cf4c841eba6bee60572, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyMaxHealth: 30
-  health: 0
-  enemyScore: 0
-  score: {fileID: 11400000, guid: dbe1a1cb960aed74891a11fb4402c896, type: 2}
-  difficulty: {fileID: 0}
 --- !u!50 &8615009397194100353
 Rigidbody2D:
   serializedVersion: 4
