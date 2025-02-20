@@ -2,17 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Difficulty : MonoBehaviour
+[CreateAssetMenu(fileName ="Difficulty", menuName = "Difficulty")]
+public class Difficulty : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public int difficulty; //stores difficulty level
 }
