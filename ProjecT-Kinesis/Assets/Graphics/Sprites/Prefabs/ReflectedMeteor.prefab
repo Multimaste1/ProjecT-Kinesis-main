@@ -162,4 +162,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
+  enemyScore: 0
+  difficulty: {fileID: 11400000, guid: 3db55f3ecbd67354a8443e02c5af4851, type: 2}
   reflectedprojectileVelocity: 10
