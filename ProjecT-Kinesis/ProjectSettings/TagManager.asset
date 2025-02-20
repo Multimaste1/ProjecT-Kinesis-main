@@ -9,6 +9,7 @@ TagManager:
   - Projectile
   - Enemy
   - Reflected
+  - Boss
   layers:
   - Default
   - TransparentFX
