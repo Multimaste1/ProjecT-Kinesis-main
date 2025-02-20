@@ -723,6 +723,7 @@ GameObject:
   - component: {fileID: 397306941}
   - component: {fileID: 397306940}
   - component: {fileID: 397306944}
+  - component: {fileID: 397306945}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -829,6 +830,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04e3a38122c3c54dac17f83a535d851, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: 
+--- !u!114 &397306945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397306939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c08cdf2562a934bbe5c757542c6f83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Difficulty: {fileID: 11400000, guid: 3db55f3ecbd67354a8443e02c5af4851, type: 2}
 --- !u!1 &488220785
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,7 +1232,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &758530918
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1445,7 +1460,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &865330047
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1555,7 +1570,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 905510693}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 397306945}
+        m_TargetAssemblyTypeName: DifficultyManager, Assembly-CSharp
+        m_MethodName: setEasy
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &905510693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1868,7 +1895,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1079495501}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 397306945}
+        m_TargetAssemblyTypeName: DifficultyManager, Assembly-CSharp
+        m_MethodName: setMedium
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1079495501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2047,7 +2086,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1233358345}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 397306945}
+        m_TargetAssemblyTypeName: DifficultyManager, Assembly-CSharp
+        m_MethodName: setHard
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1233358345
 MonoBehaviour:
   m_ObjectHideFlags: 0
