@@ -7,16 +7,35 @@ public class EnemyProjectile : MonoBehaviour
     public int damage;
 
 
-    public GameObject player;
-    public Rigidbody2D Rigidbody;
-    public float projectileVelocity;
+    private GameObject player;
+    private Rigidbody2D Rigidbody;
+    [SerializeField]
+    private float projectileVelocity;
     // Start is called before the first frame update
 
     private GameObject orb;
     private GameObject enemy;
+
+    public Difficulty difficulty;
     
     void Start()
     {
+        switch (difficulty.difficulty) //cases dependning on difficulty selected which changes projectile velocity
+        {
+            case 1:
+                projectileVelocity = 5;
+                break;
+            case 2:
+                projectileVelocity = 10;
+                break;
+            case 3:
+                projectileVelocity = 15;
+                break;
+            default:
+                projectileVelocity = 5;
+                break;
+        }
+
         Rigidbody = GetComponent<Rigidbody2D>(); //accesses rigid body component of projectile
         player = GameObject.FindGameObjectWithTag("Player"); //finds Player game object
 
@@ -25,16 +44,6 @@ public class EnemyProjectile : MonoBehaviour
 
         float projectileRotation = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;//angle of rotation that projectile needs to face towards player; converts from radians to degrees 
         transform.rotation = Quaternion.Euler(0,0, projectileRotation);//adjusts rotation so that graphic of projectile is correct
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-
-
-
-
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
