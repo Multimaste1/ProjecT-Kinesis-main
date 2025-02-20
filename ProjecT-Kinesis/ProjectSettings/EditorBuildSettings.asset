@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Sunset Ocean.unity
     guid: b33498e0d7b766a4883bdea2a0f89243
+  - enabled: 1
+    path: Assets/Scenes/Menus/GameOver.unity
+    guid: b57274eecaee77644a49a8e0627e3388
   m_configObjects: {}
