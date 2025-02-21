@@ -18,7 +18,6 @@ public class SceneManagerScript : MonoBehaviour
     //method for loading maps 
     public void LoadScene()
     {
-        
         SceneManager.LoadScene(sceneName);
     }
     //method for loading menus

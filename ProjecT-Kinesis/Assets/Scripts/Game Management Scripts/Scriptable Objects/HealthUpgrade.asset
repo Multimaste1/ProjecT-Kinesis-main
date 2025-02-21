@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: HealthUpgrade
   m_EditorClassIdentifier: 
   UpgradeType: Health
-  UpgradeCost: 10
-  UpgradeLevel: 5
+  UpgradeCost: 22
+  UpgradeLevel: 3
