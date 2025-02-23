@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FlightUpgrade.LoadData();
         switch (FlightUpgrade.UpgradeLevel) //different cases for different upgrade levels; upgrades are applied at the start of the scene
         {
             case 0: 
@@ -40,10 +41,5 @@ public class Player : MonoBehaviour
         Vector2 movement = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")); //Vector 2 is made taking vertical and horizontal input
         transform.position += (Vector3)(movement * speedMultiplier * Time.deltaTime); //smoothly offsets the players position no matter the frame rate
         
-    }
-
-    private void FixedUpdate()
-    {
-       
     }
 }

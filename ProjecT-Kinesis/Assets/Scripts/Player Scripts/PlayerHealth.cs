@@ -15,6 +15,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
+        HealthUpgrade.LoadData();
         switch (HealthUpgrade.UpgradeLevel) //different health values depending on upgrade level stored in Health Upgrade SO
         {
             case 0: 
