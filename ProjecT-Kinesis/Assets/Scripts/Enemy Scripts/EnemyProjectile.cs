@@ -20,6 +20,7 @@ public class EnemyProjectile : MonoBehaviour
     
     void Start()
     {
+        difficulty.LoadData();
         switch (difficulty.difficulty) //cases dependning on difficulty selected which changes projectile velocity
         {
             case 1:
@@ -58,12 +59,14 @@ public class EnemyProjectile : MonoBehaviour
         {
             Debug.Log("hit");
             collision.gameObject.GetComponent<PlayerHealth>().takedamage(damage); //gets the PlayerHealth script from the player and runs the takedamage function
+            FindAnyObjectByType<AudioManager>().playSound("PlayerHurt");
             Destroy(gameObject);
         }
 
         if (collision.gameObject.CompareTag("Platform")) //destroys the projectile if it colides with the players platform
         {
             Destroy(gameObject);
+            FindAnyObjectByType<AudioManager>().playSound("PlatformHit");
         }
         if (collision.gameObject.CompareTag("Orb")) //destroys the projectile if it collides with the orb
         {

@@ -17,6 +17,7 @@ public class EnemyHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        difficulty.LoadData();
         switch (difficulty.difficulty) //cases dependning on difficulty selected which change enemy health
         {
             case 1: 

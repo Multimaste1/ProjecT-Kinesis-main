@@ -52,6 +52,7 @@ public class EnemySpawner : MonoBehaviour
             bossSpawned = true;
             Debug.Log("Boss spawning at" + timer.timerCount); //shows time at which boss spanws which should be equal to bossTimer
             spawnBoss();
+            FindAnyObjectByType<AudioManager>().playSound("BossRoar");
         }
     }
 
