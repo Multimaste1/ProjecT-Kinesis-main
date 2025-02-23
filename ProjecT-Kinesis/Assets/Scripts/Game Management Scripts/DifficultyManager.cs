@@ -10,16 +10,19 @@ public class DifficultyManager : MonoBehaviour
     public void setEasy() //sets difficulty level (1 = easy, 2 = medium, 3 = hard)
     {
         Difficulty.difficulty = 1;
+        Difficulty.SaveData();
     }
 
     public void setMedium()
     {
         Difficulty.difficulty = 2;
+        Difficulty.SaveData();
     }
 
     public void setHard() 
     {
         Difficulty.difficulty = 3;
+        Difficulty.SaveData();
     }
 
 }
