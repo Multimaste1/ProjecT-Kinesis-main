@@ -20,25 +20,33 @@ public class ReflectedProjectileBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        difficulty.LoadData();
+
         reflectedprojectileRigidBody = GetComponent<Rigidbody2D>(); //accesses rigid body component of reflectprojectile
-        
-        int randomNumber  = Random.Range(1, 2);
-        switch (randomNumber) //projectile will either go towards Boss or enemy; this allows me to keep the enemy health and boss health variables in seperate scripts
+        if (IsObjectWithTagPresent("Boss"))
         {
-            case 1: 
-                enemy = GameObject.FindGameObjectWithTag("Enemy"); //projectile will find enemy game object
-                break;
-            case 2:
-                enemy = GameObject.FindGameObjectWithTag("Boss");
-                break;
+            int randomNumber = Random.Range(1, 3);
+            switch (randomNumber) //projectile will either go towards Boss or enemy; this allows me to keep the enemy health and boss health variables in seperate scripts
+            {
+                case 1:
+                    enemy = GameObject.FindGameObjectWithTag("Enemy"); //projectile will find enemy game object
+                    break;
+                case 2:
+                    enemy = GameObject.FindGameObjectWithTag("Boss"); //projectile will find boss game object
+                    break;
+            }
         }
-        
+        else
+        {
+            enemy = GameObject.FindGameObjectWithTag("Enemy"); //projectile will find enemy game object
+        }
+             
 
         Vector3 direction = enemy.transform.position - transform.position; //sets direction for projectile to travel towards enemy
         reflectedprojectileRigidBody.velocity = new Vector2(direction.x, direction.y).normalized * reflectedprojectileVelocity;
 
         float reflectedprojectileRotation = Mathf.Atan2(-direction.y, -direction.x) * Mathf.Rad2Deg;//angle of rotation that projectile needs to face towards player; converts from radians to degrees 
-        transform.rotation = Quaternion.Euler(0, 0, reflectedprojectileRotation + 45);//adjusts rotation so that graphic of projectile is correct
+        transform.rotation = Quaternion.Euler(0, reflectedprojectileRotation,0 );//adjusts rotation so that graphic of projectile is correct
 
 
         switch (difficulty.difficulty) //cases dependning on difficulty selected which changes score that enemies provide
@@ -60,6 +68,8 @@ public class ReflectedProjectileBehaviour : MonoBehaviour
                 bossScore = 200;
                 break;
         }
+
+        Destroy(gameObject, 5f); //despawn after 5 seconds  
     }
 
     // Update is called once per frame
@@ -75,12 +85,19 @@ public class ReflectedProjectileBehaviour : MonoBehaviour
         {
             Debug.Log("hit");
             collision.gameObject.GetComponent<EnemyHealth>().takedamage(damage, enemyScore); //gets the Enemy script from the enemy and runs the takedamage function
+            FindAnyObjectByType<AudioManager>().playSound("EnemyHurt");
             Destroy(gameObject); //destroys projectile
         }
         else if (collision.gameObject.CompareTag("Boss"))
         {
             collision.gameObject.GetComponent<BossHealth>().takedamage(damage, bossScore);
+            FindAnyObjectByType<AudioManager>().playSound("BossHurt");
             Destroy(gameObject);
         }
+    }
+
+    bool IsObjectWithTagPresent(string tag) //bool whether boss is in scene or not
+    {
+        return GameObject.FindGameObjectWithTag(tag) != null;
     }
 }
