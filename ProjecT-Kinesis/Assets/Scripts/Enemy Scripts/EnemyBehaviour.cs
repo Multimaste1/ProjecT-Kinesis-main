@@ -47,6 +47,7 @@ public class EnemyBehaviour : MonoBehaviour
         void shoot()
         {
             Instantiate(projectile, projectilePos.position, Quaternion.identity); //spawns projectile from position specified in the inspector
+            FindAnyObjectByType<AudioManager>().playSound("Fireball");
         }
     }
 }

@@ -14,6 +14,9 @@ public class OrbofProtection : MonoBehaviour
     public SizeUpgrade SizeUpgrade;
     void Start()
     {
+        VelocityUpgrade.LoadData();
+        SizeUpgrade.LoadData();
+
         switch (VelocityUpgrade.UpgradeLevel) //different cases for different upgrade levels; upgrades are applied at the start of the scene
         {
             case 0: 
@@ -78,6 +81,7 @@ public class OrbofProtection : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Projectile"))
+            FindAnyObjectByType<AudioManager>().playSound("Reflection");
         reflection();
     }
 }
