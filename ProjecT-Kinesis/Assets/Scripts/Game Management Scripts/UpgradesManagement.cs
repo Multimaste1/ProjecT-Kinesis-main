@@ -39,6 +39,11 @@ public class UpgradesManagement : MonoBehaviour
     void Start()
     {
         UpdateUI(); //applies UI elements at start of scene
+        health.LoadData(); //loads data of scriptable objects
+        flight.LoadData();
+        size.LoadData();
+        velocity.LoadData();
+        coins.LoadData();
     }
 
     
@@ -72,10 +77,12 @@ public class UpgradesManagement : MonoBehaviour
             coinstext.text = "Coins: " + coins.coinbalance.ToString(); //changes coin text to display coin total after upgrade purchase
 
 
-            health.UpgradeCost = Mathf.FloorToInt(health.UpgradeCost * 1.5f); //increases upgrade cost by 50%
+            health.UpgradeCost = Mathf.FloorToInt(health.UpgradeCost+=20); //increases upgrade cost by 50%
             healthCosttext.text = "Cost: " + health.UpgradeCost.ToString(); //changes cost text of corresponding upgrade
             Debug.Log(coins.coinbalance);
             UpdateUI();
+            health.SaveData(); //saves new health data
+            coins.SaveData(); //saves new coins data
         }
         else //if max level (5) is reached 
         {
@@ -85,12 +92,12 @@ public class UpgradesManagement : MonoBehaviour
     }
 
 
-    public void upgradeFlight() //function to upgradehealth
+    public void upgradeFlight() //function to upgradeFlight
     {
         if (flight.UpgradeLevel < upgradeBars.Length - 1 && coins.coinbalance >= (flight.UpgradeCost)) //if max level (5) isn't reached and coin balance >= cost
         {
 
-            flightupgradeBar.sprite = upgradeBars[flight.UpgradeLevel]; //
+            flightupgradeBar.sprite = upgradeBars[flight.UpgradeLevel];
             flight.UpgradeLevel += 1;
             //increments through upgrade levels
 
@@ -98,10 +105,12 @@ public class UpgradesManagement : MonoBehaviour
             coinstext.text = "Coins: " + coins.coinbalance.ToString(); //changes coin text to display coin total after upgrade purchase
 
 
-            flight.UpgradeCost = Mathf.FloorToInt(flight.UpgradeCost * 1.5f);
+            flight.UpgradeCost = Mathf.FloorToInt(flight.UpgradeCost +=20);
             flightCosttext.text = "Cost: " + flight.UpgradeCost.ToString();
             Debug.Log(coins.coinbalance);
             UpdateUI();
+            flight.SaveData();
+            coins.SaveData();
         }
         else //if max level (5) is reached 
         {
@@ -110,12 +119,12 @@ public class UpgradesManagement : MonoBehaviour
         }
     }
 
-    public void upgradeSize() //function to upgradehealth
+    public void upgradeSize() //function to upgradeSize
     {
         if (size.UpgradeLevel < upgradeBars.Length - 1 && coins.coinbalance >= (size.UpgradeCost)) //if max level (5) isn't reached and coin balance >= cost
         {
 
-            sizeupgradeBar.sprite = upgradeBars[size.UpgradeLevel]; //
+            sizeupgradeBar.sprite = upgradeBars[size.UpgradeLevel];
             size.UpgradeLevel += 1;
             //increments through upgrade levels
 
@@ -123,10 +132,12 @@ public class UpgradesManagement : MonoBehaviour
             coinstext.text = "Coins: " + coins.coinbalance.ToString(); //changes coin text to display coin total after upgrade purchase
 
 
-            size.UpgradeCost = Mathf.FloorToInt(size.UpgradeCost * 1.5f);
+            size.UpgradeCost = Mathf.FloorToInt(size.UpgradeCost += 20);
             sizeCosttext.text = "Cost: " + size.UpgradeCost.ToString();
             Debug.Log(coins.coinbalance);
             UpdateUI();
+            size.SaveData();
+            coins.SaveData();
         }
         else //if max level (5) is reached 
         {
@@ -135,7 +146,7 @@ public class UpgradesManagement : MonoBehaviour
         }
     }
 
-    public void upgradeVelocity() //function to upgradehealth
+    public void upgradeVelocity() //function to upgradeVelocity
     {
         if (velocity.UpgradeLevel < upgradeBars.Length - 1 && coins.coinbalance >= (velocity.UpgradeCost)) //if max level (5) isn't reached and coin balance >= cost
         {
@@ -148,10 +159,12 @@ public class UpgradesManagement : MonoBehaviour
             coinstext.text = "Coins: " + coins.coinbalance.ToString(); //changes coin text to display coin total after upgrade purchase
 
 
-            velocity.UpgradeCost = Mathf.FloorToInt(velocity.UpgradeCost * 1.5f);
+            velocity.UpgradeCost = Mathf.FloorToInt(velocity.UpgradeCost += 20);
             velocityCosttext.text = "Cost: " + velocity.UpgradeCost.ToString();
             Debug.Log(coins.coinbalance);
             UpdateUI();
+            velocity.SaveData();
+            coins.SaveData();
         }
         else //if max level (5) is reached 
         {
