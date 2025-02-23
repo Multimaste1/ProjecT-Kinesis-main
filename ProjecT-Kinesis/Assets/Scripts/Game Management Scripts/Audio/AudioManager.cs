@@ -7,8 +7,22 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
+    public static AudioManager instance;
+
      void Awake()
     {
+
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else 
+        {
+            Destroy(gameObject);
+            return;
+        }
+        DontDestroyOnLoad(gameObject);
+
         foreach(Sound soundtoPlay in sounds) //goes through each Sound in sound list and adds an audiosource component to it
         {
            soundtoPlay.source = gameObject.AddComponent<AudioSource>(); //the AudioSource of the sound to play is added to the AudioManager Gameobject
@@ -16,7 +30,9 @@ public class AudioManager : MonoBehaviour
 
             soundtoPlay.source.volume = soundtoPlay.volume; //volume and sliders of AudioSource are changed in the inspector
             soundtoPlay.source.pitch = soundtoPlay.pitch;
-        }
+            soundtoPlay.source.loop = soundtoPlay.loop; //bool for whether sound should loop or not
+            soundtoPlay.source.playOnAwake = soundtoPlay.playOnAwake; //bool for whether sound should play when audiomanager is enabled
+        } 
     }
 
     void Start() //sounds to start at start of scene
