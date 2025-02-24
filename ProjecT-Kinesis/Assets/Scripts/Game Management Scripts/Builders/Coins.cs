@@ -16,17 +16,15 @@ public class Coins : ScriptableObject
 
     public void SaveData()
     {
-        PlayerPrefs.SetInt("Coins", coinbalance);
-        PlayerPrefs.SetFloat("Coins", coinbalance);
+        PlayerPrefs.SetInt("Coins", coinbalance); 
         PlayerPrefs.Save();
     }
 
     public void LoadData()
     {
-        if (PlayerPrefs.HasKey("VelocityUpgradeLevel"))
+        if (PlayerPrefs.HasKey("Coins"))
         {
             coinbalance = PlayerPrefs.GetInt("Coins");
-            
         }
 
     }
