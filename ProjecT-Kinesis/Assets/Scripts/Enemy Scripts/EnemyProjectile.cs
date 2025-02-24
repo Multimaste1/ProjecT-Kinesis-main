@@ -59,8 +59,8 @@ public class EnemyProjectile : MonoBehaviour
         {
             Debug.Log("hit");
             collision.gameObject.GetComponent<PlayerHealth>().takedamage(damage); //gets the PlayerHealth script from the player and runs the takedamage function
-            FindAnyObjectByType<AudioManager>().playSound("PlayerHurt");
             Destroy(gameObject);
+            FindAnyObjectByType<AudioManager>().playSound("PlayerHurt");
         }
 
         if (collision.gameObject.CompareTag("Platform")) //destroys the projectile if it colides with the players platform

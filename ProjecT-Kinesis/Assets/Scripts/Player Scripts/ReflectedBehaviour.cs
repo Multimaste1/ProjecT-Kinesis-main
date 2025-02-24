@@ -85,14 +85,14 @@ public class ReflectedProjectileBehaviour : MonoBehaviour
         {
             Debug.Log("hit");
             collision.gameObject.GetComponent<EnemyHealth>().takedamage(damage, enemyScore); //gets the Enemy script from the enemy and runs the takedamage function
-            FindAnyObjectByType<AudioManager>().playSound("EnemyHurt");
             Destroy(gameObject); //destroys projectile
+            FindAnyObjectByType<AudioManager>().playSound("EnemyHurt");
         }
         else if (collision.gameObject.CompareTag("Boss"))
         {
             collision.gameObject.GetComponent<BossHealth>().takedamage(damage, bossScore);
-            FindAnyObjectByType<AudioManager>().playSound("BossHurt");
             Destroy(gameObject);
+            FindAnyObjectByType<AudioManager>().playSound("BossHurt");
         }
     }
 

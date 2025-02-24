@@ -15,17 +15,19 @@ public class CoinBehaviour : MonoBehaviour
         {
             coins.coinbalance += 5;
             score.score += 50;
-            FindAnyObjectByType<AudioManager>().playSound("Coin");
             Debug.Log("score Up");
+            coins.SaveData();
             Destroy(gameObject);
+            FindAnyObjectByType<AudioManager>().playSound("Coin");
         }
         else if (collision.gameObject.CompareTag("Orb"))
         {
             coins.coinbalance += 5;
             score.score += 50;
-            FindAnyObjectByType<AudioManager>().playSound("Coin");
             Debug.Log("score Up");
+            coins.SaveData();
             Destroy(gameObject);
+            FindAnyObjectByType<AudioManager>().playSound("Coin");
         }
         else
         {

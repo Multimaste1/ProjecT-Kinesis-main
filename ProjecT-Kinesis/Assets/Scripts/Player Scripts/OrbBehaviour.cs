@@ -80,9 +80,9 @@ public class OrbofProtection : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Projectile"))
-            FindAnyObjectByType<AudioManager>().playSound("Reflection");
+        if (collision.gameObject.CompareTag("Projectile"))    
         reflection();
+        FindAnyObjectByType<AudioManager>().playSound("Reflection");
     }
 }
     
