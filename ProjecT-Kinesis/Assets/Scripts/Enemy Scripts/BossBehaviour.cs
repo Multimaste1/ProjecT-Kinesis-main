@@ -28,9 +28,6 @@ public class BossBehaviour : MonoBehaviour
 
     void shoot()
     {
-        
-        
             Instantiate(projectile, projectilePos.position, Quaternion.identity); //spawns in 3 projectiles at once
-        
     }
 }

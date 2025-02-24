@@ -38,12 +38,12 @@ public class UpgradesManagement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UpdateUI(); //applies UI elements at start of scene
         health.LoadData(); //loads data of scriptable objects
         flight.LoadData();
         size.LoadData();
         velocity.LoadData();
         coins.LoadData();
+        UpdateUI(); //applies UI elements at start of scene
     }
 
     
