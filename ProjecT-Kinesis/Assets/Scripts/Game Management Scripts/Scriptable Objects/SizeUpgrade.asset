@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SizeUpgrade
   m_EditorClassIdentifier: 
   UpgradeType: Size
-  UpgradeCost: 50
-  UpgradeLevel: 2
+  UpgradeCost: 10
+  UpgradeLevel: 0
