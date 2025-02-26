@@ -310,6 +310,7 @@ GameObject:
   - component: {fileID: 218426043}
   - component: {fileID: 218426042}
   - component: {fileID: 218426041}
+  - component: {fileID: 218426045}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -411,6 +412,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &218426045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218426040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6dc5a44d576e354989ac142ccf56a35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highscore: {fileID: 11400000, guid: abcb35a006558e9439b27643fa09ecd4, type: 2}
+  score: {fileID: 11400000, guid: dbe1a1cb960aed74891a11fb4402c896, type: 2}
+  highScoretext: {fileID: 0}
+  yourScoretext: {fileID: 0}
 --- !u!1 &373864960
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,9 +574,21 @@ PrefabInstance:
       value: Player+Island
       objectReference: {fileID: 0}
     - target: {fileID: 2381216469815945428, guid: b23136a410088e943a05adfab3bf0a5d, type: 3}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 11400000, guid: dbe1a1cb960aed74891a11fb4402c896, type: 2}
+    - target: {fileID: 2381216469815945428, guid: b23136a410088e943a05adfab3bf0a5d, type: 3}
+      propertyPath: highscore
+      value: 
+      objectReference: {fileID: 11400000, guid: abcb35a006558e9439b27643fa09ecd4, type: 2}
+    - target: {fileID: 2381216469815945428, guid: b23136a410088e943a05adfab3bf0a5d, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2381216469815945428, guid: b23136a410088e943a05adfab3bf0a5d, type: 3}
+      propertyPath: HighscoreUI
+      value: 
+      objectReference: {fileID: 218426045}
     - target: {fileID: 3515060739366587973, guid: b23136a410088e943a05adfab3bf0a5d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.6
@@ -1714,7 +1743,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1206858785
 RectTransform:
   m_ObjectHideFlags: 0
