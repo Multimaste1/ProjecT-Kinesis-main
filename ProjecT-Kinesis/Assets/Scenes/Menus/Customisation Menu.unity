@@ -542,16 +542,16 @@ MonoBehaviour:
           m_StringArgument: Upgrade Menu
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3860489770041698746, guid: 096ae532f2e608245bb0aed74d4ce59d, type: 3}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: playSound
+      - m_Target: {fileID: 1251057855}
+        m_TargetAssemblyTypeName: SkinManager, Assembly-CSharp
+        m_MethodName: PlayGame
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: StartGame
+          m_StringArgument: Upgrade Menu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &239568921
@@ -1316,6 +1316,7 @@ MonoBehaviour:
   - {fileID: -1203027368, guid: 36b90ec51db26744d85d78f5b11faf09, type: 3}
   - {fileID: 1500943404, guid: d2b8883229e3c1c4388123530761cb76, type: 3}
   playerskin: {fileID: 1505278070}
+  selectedSkinData: {fileID: 11400000, guid: d8c852fa72dda294f910f9d7b23f4474, type: 2}
 --- !u!4 &1251057856
 Transform:
   m_ObjectHideFlags: 0

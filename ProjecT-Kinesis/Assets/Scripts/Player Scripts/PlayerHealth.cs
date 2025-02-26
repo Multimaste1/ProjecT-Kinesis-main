@@ -49,7 +49,7 @@ public class PlayerHealth : MonoBehaviour
             HighscoreUI.checkScore(score,highscore);
             Debug.Log("Checking score");
             Destroy(gameObject);
-            SceneManager.LoadScene("GameOver");
+            //SceneManager.LoadScene("GameOver");
         }
     }
 

@@ -1210,8 +1210,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1983a64bbeca2314c9a5b840c1aa138a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Selectedskin: {fileID: 4912354745261534469, guid: b143e96440f250c41aa89c5061865600, type: 3}
-  Player: {fileID: 924634221}
+  skinData: {fileID: 11400000, guid: d8c852fa72dda294f910f9d7b23f4474, type: 2}
+  skins:
+  - {fileID: -442434546, guid: 10dcff7d12d746f4d8262c7ca5b7fce1, type: 3}
+  - {fileID: -518788445, guid: c33ce8dd9f86ac84d8d06ef34558fbc5, type: 3}
+  - {fileID: -1203027368, guid: 36b90ec51db26744d85d78f5b11faf09, type: 3}
+  - {fileID: 1500943404, guid: d2b8883229e3c1c4388123530761cb76, type: 3}
+  player: {fileID: 924634221}
 --- !u!4 &774998019
 Transform:
   m_ObjectHideFlags: 0
