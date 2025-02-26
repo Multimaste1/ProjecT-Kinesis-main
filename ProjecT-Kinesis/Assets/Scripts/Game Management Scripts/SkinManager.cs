@@ -10,8 +10,8 @@ public class SkinManager : MonoBehaviour
    public List<Sprite> skins = new List<Sprite>(); //stores list of sprites added in the inspector
     private int selectedSkin = 0;
     public GameObject playerskin;
-    
 
+    public SelectedSkinData selectedSkinData;
     public void nextSkin()
     {
         selectedSkin += 1; //iterates through the list of skins as button is clicked
@@ -34,7 +34,8 @@ public class SkinManager : MonoBehaviour
 
     public void PlayGame(string sceneName)
     {
-        PrefabUtility.SaveAsPrefabAsset(playerskin, "Assets/Graphics/Sprites/Prefabs/Selectedskin.prefab"); //saves playerskin as a prefab in the editor
+        selectedSkinData.selectedSkinindex =  selectedSkin; //saves playerskin as a prefab in the editor
+        selectedSkinData.SaveData();
         SceneManager.LoadScene(sceneName); //loads next scene
     }
   
