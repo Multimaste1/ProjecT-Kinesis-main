@@ -447,8 +447,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000038146973, y: 12}
-  m_SizeDelta: {x: 70.386, y: 36.099}
+  m_AnchoredPosition: {x: -11, y: -53}
+  m_SizeDelta: {x: 54.399, y: 22.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &373864962
 MonoBehaviour:
@@ -493,7 +493,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 373864963}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 774998024}
+        m_TargetAssemblyTypeName: SceneManagerScript, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Startup Screen
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &373864963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1038,8 +1050,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: 191}
-  m_SizeDelta: {x: 100.414, y: 35.161}
+  m_AnchoredPosition: {x: 5.4130173, y: 134.99998}
+  m_SizeDelta: {x: 87.225, y: 23.171}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &708219531
 MonoBehaviour:
@@ -1084,7 +1096,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 708219532}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 774998023}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: Resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &708219532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1136,6 +1160,8 @@ GameObject:
   - component: {fileID: 774998020}
   - component: {fileID: 774998021}
   - component: {fileID: 774998022}
+  - component: {fileID: 774998023}
+  - component: {fileID: 774998024}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -1229,6 +1255,32 @@ MonoBehaviour:
   bossTimer: 5
   timer: {fileID: 11400000, guid: 66c8b3e6a8ccb4146ba668989fd2fcc3, type: 2}
   difficulty: {fileID: 11400000, guid: 3db55f3ecbd67354a8443e02c5af4851, type: 2}
+--- !u!114 &774998023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774998017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a9c497b60cf7b40b6feb59240544af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 1206858784}
+--- !u!114 &774998024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774998017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04e3a38122c3c54dac17f83a535d851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 
 --- !u!1 &848294798
 GameObject:
   m_ObjectHideFlags: 0
@@ -2730,8 +2782,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000038146973, y: -144}
-  m_SizeDelta: {x: 70.386, y: 36.099}
+  m_AnchoredPosition: {x: -18.18896, y: -215.00002}
+  m_SizeDelta: {x: 47.204, y: 21.71}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1807452549
 MonoBehaviour:
@@ -2776,7 +2828,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1807452550}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 774998024}
+        m_TargetAssemblyTypeName: SceneManagerScript, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1807452550
 MonoBehaviour:
   m_ObjectHideFlags: 0
