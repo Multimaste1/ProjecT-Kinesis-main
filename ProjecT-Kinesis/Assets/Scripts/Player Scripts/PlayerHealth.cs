@@ -13,6 +13,11 @@ public class PlayerHealth : MonoBehaviour
 
     public HealthUpgrade HealthUpgrade;
 
+    public HighscoreUI HighscoreUI;
+
+    public Score score;
+    public Highscore highscore;
+
     void Start()
     {
         HealthUpgrade.LoadData();
@@ -41,6 +46,8 @@ public class PlayerHealth : MonoBehaviour
         Health = Health - damage;
         if (Health <= 0)
         {
+            HighscoreUI.checkScore(score,highscore);
+            Debug.Log("Checking score");
             Destroy(gameObject);
             SceneManager.LoadScene("GameOver");
         }
