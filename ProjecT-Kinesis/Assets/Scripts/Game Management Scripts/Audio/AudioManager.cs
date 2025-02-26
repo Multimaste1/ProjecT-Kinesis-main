@@ -42,6 +42,11 @@ public class AudioManager : MonoBehaviour
     public void playSound(string SoundName) //function to play sound, parameter of soundName is passed
     {
         Sound s = Array.Find(sounds, sound => sound.soundName == SoundName); //Array is searched to find sound with SoundName and stores this as a sound called "s"
+
+        if (PauseMenu.GameIsPaused)
+        {
+            s.source.pitch *= 5;
+        }
         s.source.Play(); //sounds "s" audiosource plays it
         
     }
