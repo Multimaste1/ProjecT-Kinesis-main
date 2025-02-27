@@ -17,9 +17,11 @@ public class PlayerHealth : MonoBehaviour
 
     public Score score;
     public Highscore highscore;
+    public Coins coins;
 
     void Start()
     {
+        coins.LoadData();
         HealthUpgrade.LoadData();
         switch (HealthUpgrade.UpgradeLevel) //different health values depending on upgrade level stored in Health Upgrade SO
         {
@@ -48,8 +50,9 @@ public class PlayerHealth : MonoBehaviour
         {
             HighscoreUI.checkScore(score,highscore);
             Debug.Log("Checking score");
+            coins.SaveData();
             Destroy(gameObject);
-            //SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("GameOver");
         }
     }
 
