@@ -574,6 +574,10 @@ PrefabInstance:
       value: Player+Island
       objectReference: {fileID: 0}
     - target: {fileID: 2381216469815945428, guid: b23136a410088e943a05adfab3bf0a5d, type: 3}
+      propertyPath: coins
+      value: 
+      objectReference: {fileID: 11400000, guid: c99857d9c0fb3ba46a1db765a7a9096c, type: 2}
+    - target: {fileID: 2381216469815945428, guid: b23136a410088e943a05adfab3bf0a5d, type: 3}
       propertyPath: score
       value: 
       objectReference: {fileID: 11400000, guid: dbe1a1cb960aed74891a11fb4402c896, type: 2}

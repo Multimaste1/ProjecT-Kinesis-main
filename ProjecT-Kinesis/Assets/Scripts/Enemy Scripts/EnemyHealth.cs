@@ -13,7 +13,6 @@ public class EnemyHealth : MonoBehaviour
 
     public Score score;
     public Difficulty difficulty;
-
     // Start is called before the first frame update
     void Start()
     {

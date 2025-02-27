@@ -16,7 +16,6 @@ public class CoinBehaviour : MonoBehaviour
             coins.coinbalance += 5;
             score.score += 50;
             Debug.Log("score Up");
-            coins.SaveData();
             Destroy(gameObject);
             FindAnyObjectByType<AudioManager>().playSound("Coin");
         }
@@ -25,7 +24,6 @@ public class CoinBehaviour : MonoBehaviour
             coins.coinbalance += 5;
             score.score += 50;
             Debug.Log("score Up");
-            coins.SaveData();
             Destroy(gameObject);
             FindAnyObjectByType<AudioManager>().playSound("Coin");
         }

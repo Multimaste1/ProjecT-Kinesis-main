@@ -2,9 +2,7 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.VisualScripting;
 using UnityEngine.UI;
-using System.Reflection;
 
 
 [CreateAssetMenu(fileName = "Coins", menuName = "Coins")]
